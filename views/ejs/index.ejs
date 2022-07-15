@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+</head>
+<body style="background-color: #2D382D;">
+    <div class="container mt-5 col-3">
+        <div class="card">
+            <div class="card-header p-3 h2 bg-success text-white text-center ">
+                Ingreso de productos
+            </div>
+            <div class="card-body">
+                <form action="/productos" method="post">
+
+                    <div class="row mt-0 p-3">
+                        <label class="h4 p-0" for="formControlInput" class="form-label">Item</label>
+                        <input name="item" class="form-control" id="formControlInput">
+                    </div>
+
+                    <div class="row mt-3">
+                        <label class="h4" for="formControlInput" class="form-label">Precio</label> <br>
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" name="precio"> <br>
+                            <span class="input-group-text">.00</span>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3 p-3">
+                        <label class="h4 p-0" for="formControlInput" class="form-label">URL producto</label> <br>
+                        <input name="url" class="form-control" id="formControlInput">
+                    </div>
+
+                    <div class="row mt-0 p-3">
+                        <button style="background-color:#1C381C" class="btn text-white" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

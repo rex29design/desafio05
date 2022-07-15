@@ -1,0 +1,21 @@
+<h1>Lista de productos:</h1>
+
+{{#if listExists }}
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Precio</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each products}}
+                <tr>
+                    <td> {{this.item}} </td>
+                    <td> {{this.precio}} </td>
+                    <td> {{this.url}} </td>
+                </tr>
+        </tbody>
+    </table>
+{{/if}}

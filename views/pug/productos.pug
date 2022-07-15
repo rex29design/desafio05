@@ -1,0 +1,25 @@
+html   
+    head 
+    
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+    body 
+        .container.m-5
+            h2="Productos:"
+                table.table.table-striped 
+                    thead 
+                      tr 
+                         th(scope="col")="Item"
+                         th(scope="col")="Precio"
+                         th(scope="col")="Url Producto" 
+                    tbody
+                        each producto in productos
+                             tr 
+                                    td= producto.item
+                                    td= producto.precio
+                                    td= producto.url
+            br
+
+            a(href="/", style="background-color:#1C381C", class="btn text-white", role="button")
+                ="Regresar"
+                

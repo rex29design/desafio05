@@ -1,0 +1,31 @@
+html 
+    head 
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    body(style={background: "#2D382D"})
+        div.container.m-5.col-3
+            .card
+             h2.card-header.p-3.bg-success.text-center
+                ="Ingreso de productos"
+                .card-body
+                    form(method="POST", action="/productos")
+
+                        div.row.mt-0.p-3
+                            label(for="formControlInput").form-label.h4.p-0
+                                ="Item"
+                                input(name="item", class="form-control", id="formControlInput")
+                        
+                        .row.mt-3
+                            label(for="formControlInput").form-label.h4.p-0
+                                ="Precio"
+                            .input-group
+                                span.input-group-text="$"
+                                input(name="precio", class="form-control", type="number",id="formControlInput")
+                                span.input-group-text=".00"
+
+                        .row.mt-0.p-3
+                            label(for="formControlInput").form-label.h4.p-0
+                                ="URL producto"
+                                input(name="url", class="form-control", id="formControlInput") 
+
+                        .row.mt-0.p-3
+                            button.btn.text-white(style="background-color:#1C381C", type="submit")="Enviar"

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container m-5">
+        <h2>Productos:</h2>
+        <% if(productos.length == 0) { %>
+            No se encontraron datos.        
+        <% } else { %>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Url Producto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% productos.forEach(producto => { %>
+                        <tr>
+                            <td><%= producto.item %></td>
+                            <td><%= producto.precio %></td>
+                            <td><%= producto.url %></td>
+                        </tr>
+                    <% }) %>  
+                </tbody>
+            </table>
+        <% } %> 
+
+        <br>
+          
+        <a href="/" style="background-color:#1C381C" class="btn text-white" role="button">Regresar</a>  
+        
+        
+
+    </div>
+</body>
+</html>
